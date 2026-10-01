@@ -1,0 +1,160 @@
+/* ===== 1. Estilos generales ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Barlow", Arial, sans-serif;
+    background-image: url("imagenes/fondo.svg");
+    background-color: #bcd6ea;
+    color: #333;
+    padding: 20px;
+}
+
+.pagina {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ===== 2. Encabezado (Flexbox) ===== */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+}
+
+.encabezado h1 {
+    font-size: 40px;
+    color: #00a3e8;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 15px 0;
+}
+
+.autor {
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* ===== 3. Títulos y textos ===== */
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 12px;
+}
+
+.intro {
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+mark {
+    background-color: #ffff00;
+}
+
+/* ===== 4. Contenedor con 3 tarjetas (Flexbox) ===== */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px;
+    border: 3px solid #222;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.tarjeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #555;
+    border-radius: 4px;
+    padding: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.tarjeta h3 {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 8px;
+}
+
+.tarjeta img {
+    width: 100px;
+    margin-top: auto;
+}
+
+.tarjeta.html { background-color: #f3e9e7; }
+.tarjeta.css  { background-color: #e6ecf0; }
+.tarjeta.js   { background-color: #eaf0de; }
+
+.tarjeta.html h3 { background-color: #e44d26; }
+.tarjeta.css  h3 { background-color: #0a74c4; }
+.tarjeta.js   h3 { background-color: #6aa81e; }
+
+/* ===== 5. Imagen de las casas con sombra ===== */
+.casas {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.casas img {
+    width: 260px;
+    border: 1px solid #ddd;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== 6. Resumen ===== */
+footer h2 {
+    margin-top: 10px;
+}
+
+.resumen {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-style: italic;
+    padding: 12px 20px;
+}
+
+/* ===== 7. Pantallas pequeñas (celular) ===== */
+@media (max-width: 700px) {
+    .contenedor { flex-direction: column; }
+    .encabezado h1 { font-size: 28px; }
+}
